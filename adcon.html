@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" action='/sun'>
+    <table width="100%" cellspacing="0" id="nt">
+
+             <tr>
+             <th colspan="3"><a style="color:red;" href="{{url_for('ctc')}}"> View Contact Details</a>||   <a style="color:red;"href="{{url_for('lgt')}}">Logout</a></th>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table width="100%" cellspacing="0" border="1">
+                    <tr>
+                        <td>User Name</td>
+                        <td>Email id</td>
+                        <td>Contact No</td>
+                        <td>Contact Purpose</td>
+                        <td>Details</td>
+                    </tr>
+                    {% for a in row %}
+                    <tr>
+                        <td>{{a[0]}}</td>
+                        <td>{{a[1]}}</td>
+                        <td>{{a[2]}}</td>
+                        <td>{{a[3]}}</td>
+                         <td>{{a[4]}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </td>
+        </tr>
+         <tr>
+            <td colspan="3">
+            {%include 'footer.html'%}
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

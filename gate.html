@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gate 2025</title>
+    <style>
+    body{
+     background-color:#F5F0E6;}
+    #ay{
+        text-align:center;
+        width:100%;
+        height:150px;
+        margin:0;
+        color:black;
+        font-size:72pt;
+        font-family:cursive;
+        font-weight:bolder;
+        background-color:lightblue;
+        }
+    </style>
+</head>
+<body>
+
+<form method="POST" action="/gate">
+    <table width="100%" cellspacing="0">
+         <tr>
+            <td colspan="3">
+            {% include 'head.html'%}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+            <h1 id="ay">Gate Section</h1>
+            </td>
+        </tr>
+        <br>
+        <br>
+       <tr>
+           <td><img src="{{url_for('static',filename='photo/c1.PNG')}}"height="200px" width="200px"/> </td>
+           <td><img src="{{url_for('static',filename='photo/g2.PNG')}}"height="200px" width="200px"/> </td>
+           <td><img src="{{url_for('static',filename='photo/g3.PNG')}}"height="200px" width="200px"/> </td>
+       </tr>
+        <tr bgcolor="red">
+            <td><a href="{{url_for('static',filename='books/C.pdf')}}">Download pdf</a></td>
+            <td><a href="{{url_for('static',filename='books/dbms.pdf')}}">Download pdf</a></td>
+            <td><a href="{{url_for('static',filename='books/DSA_Book.pdf')}}">Download pdf</a></td>
+         </tr>
+         <tr>
+            <td><img src="{{url_for('static',filename='photo/g4.PNG')}}"height="200px" width="200px"/></td>
+            <td><img src="{{url_for('static',filename='photo/g5.PNG')}}"height="200px" width="200px"/></td>
+            <td><img src="{{url_for('static',filename='photo/g6.PNG')}}"height="200px" width="200px"/> </td>
+
+         </tr>
+         <tr bgcolor="red">
+            <td><a href="{{url_for('static',filename='books/gate1.pdf')}}">Download pdf</a></td>
+            <td><a href="{{url_for('static',filename='books/gate2.pdf')}}">Download pdf</a></td>
+             <td><a href="{{url_for('static',filename='books/c++.pdf')}}">Download pdf</a></td>
+         </tr>
+         <tr>
+            <td colspan="3">
+            {%include 'footer.html'%}
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes</title>
+    <style>
+    body{
+
+        background-color:#F5F0E6;}
+        #nt{
+        font-size:20px;}
+    </style>
+</head>
+<body>
+<form method="POST" action='/notes'>
+    <table width="100%" cellspacing="0" id="nt">
+         <tr>
+            <td colspan="3">
+            {%include 'head.html'%}
+            </td>
+        </tr>
+        <tr>
+            <th>Title</th>
+            <th>:</th>
+            <th><input type="text" name="t1"></th>
+        </tr>
+        <tr>
+            <th>User Name</th>
+            <th>:</th>
+            <th><input type="text" name="t2"></th>
+        </tr>
+        <tr>
+            <th>Detail</th>
+            <th>:</th>
+            <th><input type="text" name="t3"></th>
+        </tr>
+        <tr>
+            <th>Creation Date</th>
+            <th>:</th>
+            <th><input type="date" name="t4"></th>
+        </tr>
+        <tr>
+            <th><input type="submit"name="s" value="Save"></th>
+            <th></th>
+            <th>{{m}}</th>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table width="100%" cellspacing="0" border="1">
+                    <tr>
+                        <td>Title</td>
+                        <td>UserName</td>
+                        <td>Details</td>
+                        <td>Creation Date</td>
+                    </tr>
+                    {% for a in row %}
+                    <tr>
+                        <td>{{a[0]}}</td>
+                        <td>{{a[1]}}</td>
+                        <td>{{a[2]}}</td>
+                        <td>{{a[3]}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </td>
+        </tr>
+         <tr>
+            <td colspan="3">
+            {%include 'footer.html'%}
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <style>
+    body{
+    border:3px solid black;
+    }
+    #di{
+font-size:72pt;
+text-align:center;
+background-color:lightcoral;
+width:100%;
+color:black;
+font-weight:bolder;
+font-family:cursive;
+height:150px;
+border-radius:10px;
+}
+    #he{
+font-size:x-large;
+cell-padding:10px;
+background-color:#363648;
+color:black;
+font-weight:bold;
+text-align:center;
+font-family:times in roman;
+height:30px;
+}
+ #he:hover{
+background-color:hotpink;
+color:red;
+}
+a{
+text-decoration:none;
+color:white;
+}
+</style>
+</head>
+<body>
+<form method="POST" action='/lib'>
+<table width="100%" cellspacing="0">
+    <tr>
+        <th id="di">Digital Library</th>
+    </tr>
+    <tr>
+        <td>
+            <table width="100%" cellspacing="0" border="1px dotted black">
+                <tr>
+                    <th id="he"><a href="{{url_for('siri')}}">Home</a></th>
+                    <th id="he"><a href="{{url_for('hind')}}">Hindi</a></th>
+                    <th id="he"><a href="{{url_for('comp')}}">Computer</a></th>
+                    <th id="he"><a href="{{url_for('plm')}}">Placements</a></th>
+                    <th id="he"><a href="{{url_for('jv')}}">Java</a></th>
+                    <th id="he"><a href="{{url_for('gt')}}">Gate</a></th>
+                    <th id="he"><a href="{{url_for('nts')}}">Notes</a></th>
+                    <th id="he"><a href="{{url_for('lgt')}}">Logout</a></th>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td><img src="{{url_for('static',filename='photo/pic1.jfif')}}" height="400px" width="100%"/></td>
+    </tr>
+    <tr>
+        <td>{%include 'footer.html'%}</td>
+    </tr>
+</table>
+    </form>
+</body>
+</html>

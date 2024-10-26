@@ -1,0 +1,145 @@
+ Server: localhost -  Database: digi
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Oct 05, 2024 at 01:28 PM
+-- Server version: 5.1.36
+-- PHP Version: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `digi`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `AdminId` varchar(255) NOT NULL,
+  `Password` varchar(50) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`AdminId`, `Password`) VALUES
+('Ayushi', '2004');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact`
+--
+
+CREATE TABLE IF NOT EXISTS `contact` (
+  `UserName` varchar(50) NOT NULL,
+  `EmailId` varchar(50) NOT NULL,
+  `ContactNo` bigint(50) NOT NULL,
+  `ContactPurpose` varchar(255) NOT NULL,
+  `Detail` varchar(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`UserName`, `EmailId`, `ContactNo`, `ContactPurpose`, `Detail`) VALUES
+('Anu', 'anu@gmail.com', 95558746512, 'Query', 'Call urgently'),
+('Aryan', 'aryan@gmail.com', 9555852247, 'Query regarding registration process ', 'reply me asap '),
+('Sumit', 'sumit123@gmail.com', 8765176465, 'Query regarding download ', 'Facing problem in downloading the notes'),
+('Abhishek', 'anti23456@gmail.com', 9415585066, 'E', ''),
+('Arpita Yadav', 'arpita2207@gmail.com', 876594582, 'Browser issue', 'Can''t open the website'),
+('Harshita', 'harshita09@gmail.com', 955854578, 'Query', 'Want to call on cusomer service center'),
+('Palak', 'palak5248@gnail.com', 955854541, 'Query', 'Want to call on cusomer service center');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE IF NOT EXISTS `login` (
+  `UserName` varchar(50) NOT NULL,
+  `Password` varchar(50) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`UserName`, `Password`) VALUES
+('Ayushi', '10166'),
+('Anurag', '987'),
+('Harshita', '5874'),
+('Sanchita', '2004'),
+('Aryan', '1402'),
+('Arpita Yadav', '5024'),
+('Jahnavi', '4563'),
+('Dharshika', '8765'),
+('Dhruv', '2007'),
+('Eshan', '4563');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `notes`
+--
+
+CREATE TABLE IF NOT EXISTS `notes` (
+  `Title` varchar(50) NOT NULL,
+  `Username` varchar(50) NOT NULL,
+  `Detail` varchar(255) NOT NULL,
+  `CreationDate` varchar(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `notes`
+--
+
+INSERT INTO `notes` (`Title`, `Username`, `Detail`, `CreationDate`) VALUES
+('Important Topic', 'Ayushi', 'Topic', '2024-10-01'),
+('Gate questions', 'Arpita', 'Questions of OS,DBMS,dSA', '2024-09-25'),
+('Aptitude question', 'Anurag', 'Questions of Logical reasoning', '2024-08-28'),
+('Java notes', 'Anukriti ', 'Notes of Java form YouTube Lecture', '2024-07-09'),
+('C notes', 'Jahnvi rai', 'Notes form LET us C', '2024-10-29'),
+('Interview Ques.', 'Dharshika', 'Questions related to Interview', '2024-10-01'),
+('Notes of DBMS', 'Dhanvi', 'DBMS class notes', '2024-09-26');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reg`
+--
+
+CREATE TABLE IF NOT EXISTS `reg` (
+  `UserName` varchar(50) NOT NULL,
+  `Password` varchar(50) NOT NULL,
+  `DOB` bigint(50) NOT NULL,
+  `ContactNo` bigint(50) NOT NULL,
+  `EmailId` varchar(50) NOT NULL,
+  `Address` varchar(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `reg`
+--
+
+INSERT INTO `reg` (`UserName`, `Password`, `DOB`, `ContactNo`, `EmailId`, `Address`) VALUES
+('Ayushi', '10166', 2024, 9555852246, 'ayushi@gmail.com', 'Lucknow,Uttar pradesh'),
+('Anurag', '987', 2024, 8765176468, 'anurag@gmail.com', 'Lucknow,Uttar pradesh'),
+('Sanchita', '2004', 2024, 9555852245, 'santa@gmail.com', 'Lucknow,Uttar pradesh'),
+('Aryan', '1402', 2024, 9555852245, 'santa@gmail.com', 'Lucknow,Uttar pradesh'),
+('Arpita Yadav', '5024', 2016, 8745632587, 'arpita2207@gmail.com', 'Near Hanuman mandir, lucknow'),
+('Jahnavi', '4563', 2015, 9874568124, 'rai2309@gmmmail.com', 'Tedhipuliya,Lucknow'),
+('Dharshika', '8765', 2013, 9415585466, 'singh123@gmail.com', 'Munshipuliya,Lucknow'),
+('Harshita', '5874', 2009, 9418885466, 'harshita@gmail.com', 'Munshipuliya,Lucknow'),
+('Dhruv', '2007', 2001, 9456585466, 'dhruvgamer@gmail.com', 'IT,Lucknow'),
+('Eshan', '4563', 2003, 9358476214, 'tiwari@gmail.com', 'Barabanki');
+
